@@ -121,3 +121,39 @@ for(let i=names.length-1;i>=0;i--){
 // r
 // a
 // s
+
+//Diamond Pattern
+let s = 5;
+let diamond = "";
+
+for (let i = 1; i <= s; i++) {
+    for (let j = 1; j <= s - i; j++) {
+        diamond += " ";
+    }
+    for (let k = 1; k <= 2 * i - 1; k++) {
+        diamond += "*";
+    }
+    diamond += "\n";
+}
+
+for (let i = s - 1; i >= 1; i--) {
+    for (let j = 1; j <= s - i; j++) {
+        diamond += " ";
+    }
+    for (let k = 1; k <= 2 * i - 1; k++) {
+        diamond += "*";
+    }
+    diamond += "\n";
+}
+
+console.log(diamond);
+//output:
+//     *
+//    ***
+//   *****
+//  *******
+// *********
+//  *******
+//   *****
+//    ***
+//     *
