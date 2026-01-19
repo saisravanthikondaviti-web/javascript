@@ -1,0 +1,16 @@
+let sentence = "this is a cat and a cat loves a fish";
+
+let words = sentence.split(" ");
+
+for (let i = 0; i < words.length; i++) {
+    for (let j = i + 1; j < words.length; j++) {
+        if (words[i] === words[j]) {
+            console.log("Duplicate words:", words[i]);
+            break;
+        }
+    }
+}
+//output
+//Duplicate words: 
+//a
+//cat
