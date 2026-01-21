@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop now!!</title>
+</head>
+<body>
+    <h2>
+        Shopping Cart Price calculator
+    </h2>
+    <label>Seclect payment mode:</label>
+    <select id="paymentmode">
+        <option value="upi">UPI</option>
+        <option value="card">CARD</option>
+        <option value="cash">CASH</option>
+    </select>
+    <br>
+    <br>
+    <button onclick="caluclateBill()">Caluclate Bill</button>
+    
+    <script>
+        let cart=[
+            {name:"short-kurti",price:750,quantity:1},
+            {name:"jeans",price:999,quantity:1},
+            {name:"sandals",price:650,quantity:1},
+            {name:"earings",price:750,quantity:1},
+        ];
+        function caluclateBill(){
+            let total=0;
+            for (let i=0;i<cart.length;i++){
+                total+=cart[i].price*cart[i].quantity;
+            }
+            console.log("total amount:",total);
+
+            let discount=0;
+            if(total>=3000){
+                discount=total*0.20;//20% discount
+            }
+            else if(total>=2000){
+                discount=total*0.10;//10% discount
+            }
+            else{
+                discount=0;
+            }
+
+            let finalamount=total-discount;
+
+            console.log("Discount:",discount);
+            console.log("Amount after discount:",finalamount);
+
+            let paymentmode=document.getElementById("paymentmode").value;
+            switch(paymentmode){
+                case "upi":
+                    console.log("Payement mode: UPI selected!!!");
+                    break;
+                case "card":
+                    console.log("Payment mode: CARD selected!!!");
+                    break;
+                case "cash":
+                    console.log("Payment mode: CASH selected!!!");
+                    break;
+                default:
+                    console.log("INVALID PAYMENT!!!!");
+            }
+
+            console.log("----------------------------")
+            console.log("order placed successfully!!!");
+            console.log("----------------------------")
+        }
+    </script>
+</body>
+</html>
