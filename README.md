@@ -22,4 +22,7 @@ https://github.com/saisravanthikondaviti-web/javascript/blob/main/callback.js
 https://github.com/saisravanthikondaviti-web/javascript/blob/main/conversions.js
 
 Task-20-1-26
+----shopping cart calculator
 https://saisravanthikondaviti-web.github.io/javascript/
+----student grade calculator
+https://github.com/saisravanthikondaviti-web/javascript/blob/main/studentgrade.js
